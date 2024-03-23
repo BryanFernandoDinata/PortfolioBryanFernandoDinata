@@ -1,0 +1,53 @@
+<script type="text/javascript">
+        function TextReplacerChooser(currentcardpname)
+        {
+            if(currentcardpname = "cardp1")
+            {
+                var currentp = document.getElementById("cardp1");
+                if(currentp.textContent == "This project in an ICT Project. It was a task to create Donuts using Blender.")
+                {
+                    currentp.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero blanditiis in facere provident quia? Nostrum ipsa dolores provident accusamus necessitatibus eius ipsum quidem? Dolores perspiciatis numquam iure dolor, in obcaecati.";
+                }else
+                {
+                    currentp.textContent = "This project in an ICT Project. It was a task to create Donuts using Blender.";
+                }
+            }
+        }
+        function ReadMoreIMG(currentcardbtnname, currentcardimgname, currentcardname, currentpcardname)
+        {
+            var currentcardbtn = document.getElementById(currentcardbtnname);
+            var currentcardimg = document.getElementById(currentcardimgname);
+            var currentcard = document.getElementById(currentcardname);
+            TextReplacerChooser(currentpcardname);
+            if(currentcardbtn.textContent== "Read Less")
+            {
+                currentcardimg.style.height = "70%";
+                currentcardbtn.textContent ="Read More";
+                currentcard.style.paddingBottom="0";
+            }
+            else
+            {
+                currentcardimg.style.height = "0";
+                currentcard.style.paddingBottom="21.5rem";
+                currentcardbtn.textContent ="Read Less";
+            }
+        }
+        function ReadMoreIMGSmallerSize(currentcardbtnname, currentcardimgname, currentcardname)
+        {
+            var currentcardbtn = document.getElementById(currentcardbtnname);
+            var currentcardimg = document.getElementById(currentcardimgname);
+            var currentcard = document.getElementById(currentcardname);
+            if(currentcardbtn.textContent== "Read Less")
+            {
+                currentcardimg.style.height = "70%";
+                currentcardbtn.textContent ="Read More";
+                currentcard.style.paddingBottom="0";
+            }
+            else
+            {
+                currentcardimg.style.height = "0";
+                currentcard.style.paddingBottom="17.25rem";
+                currentcardbtn.textContent ="Read Less";
+            }
+        }
+    </script>
